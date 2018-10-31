@@ -1,0 +1,152 @@
+//Our array for the story cards.
+var story = new Array(10);
+
+//The 4 things to take care off in the game. Start at a value of 5/10.
+var health = 5;
+var coWorkers = 5;
+var money = 5;
+var depression = 5;
+
+//To keep track of current question in array 
+var currentStory;
+var firstStory;
+var greenButton;
+var redButton;
+
+
+
+function setup() {
+  
+  createCanvas(1280, 720);
+  currentStory = random(10);
+  
+  //Events in the game
+  story[0] = "Story1"
+  story[1] = "Story2"
+  story[2] = "Story3"
+  story[3] = "Story4"
+  story[4] = "Story5"
+  story[5] = "Story6"
+  story[6] = "Story7"
+  story[7] = "Story8"
+  story[8] = "Story9"
+  story[9] = "Story10"
+  firstStory = "This is your story"
+}
+
+
+function draw() {
+  background(0,0,0);
+  stroke(255,255,255);
+  fill(0,0,0);
+  rect(605,100,10,50);
+  rect(625,100,10,50);
+  rect(645,100,10,50);
+  rect(665,100,10,50);
+  
+  
+//text(story[int(currentStory)], width/4,height/2);
+
+  
+  //Removes default black stroke.
+  noStroke();
+  
+  //Shading for buttons 
+  fill(130, 198, 103);
+  rect(570,590,60,60,7);
+  
+  fill(178, 50, 43);
+  rect(650,590,60,60,7);
+  
+  //Buttons
+  fill(130, 255, 103);
+  rect(570,585,60,60,7);
+  
+  fill(255, 72, 61);
+  rect(650,585,60,60,7);
+  
+  
+  fill(255,255,255);
+  text(firstStory, width/4, height/2);
+  
+}
+
+
+function mousePressed() {
+  
+  if(mouseX > 570 && mouseX < 630 && mouseY > 590 && mouseY < 650) {
+    
+          if(currentStory == 0) {
+            depression = depression ++;
+      }
+          if(currentStory == 1) {
+            depression = depression ++;
+      }
+          if(currentStory == 2) {
+            depression = depression++;
+      }
+          if(currentStory == 3) {
+            depression = depression++;
+      }
+          if(currentStory == 4) {
+            depression = depression++;
+      }
+          if(currentStory == 5) {
+            depression = depression++;
+      }
+          if(currentStory == 6) {
+            depression = depression++;
+      }
+          if(currentStory == 7) {
+            depression = depression++;
+      }
+          if(currentStory == 8) {
+            depression = depression++;
+      }
+          if(currentStory == 9) {
+            depression = depression++;
+      }
+
+    }
+    
+  if(mouseX > 650 && mouseX < 710 && mouseY > 590 && mouseY < 650) {
+    
+          if(currentStory == 0) {
+            depression = depression++;
+      }
+          if(currentStory == 1) {
+            depression = depression++;
+      }
+          if(currentStory == 2) {
+            depression = depression++;
+      }
+          if(currentStory == 3) {
+            depression = depression++;
+      }
+          if(currentStory == 4) {
+            depression = depression++;
+      }
+          if(currentStory == 5) {
+            depression = depression++;
+      }
+          if(currentStory == 6) {
+            depression = depression++;
+      }
+          if(currentStory == 7) {
+            depression = depression++;
+      }
+          if(currentStory == 8) {
+            depression = depression++;
+      }
+          if(currentStory == 9) {
+            depression = depression++;
+      }
+      
+    {
+   
+  text(story[int(currentStory)], width/4,height/2);
+  text(depression, width/4, height/3);
+  
+    }
+  }
+}
